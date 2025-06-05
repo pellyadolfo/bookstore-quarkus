@@ -1,0 +1,21 @@
+# H2 Database Configuration for an In-Memory Database
+spring.datasource.url=jdbc:h2:mem:bookstore;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.h2.console.enabled=true
+
+server.port=8080
+
+logging.level.org.springframework=INFO
+logging.level.com.example.bookstore=DEBUG
+
+components.securitySchemes.basicAuth.type.http.scheme=basic
+
+spring.sql.init.mode=always
+spring.jpa.defer-datasource-initialization=true
+
+# virtual threads, needs Java 21
+#spring.threads.virtual.enabled
